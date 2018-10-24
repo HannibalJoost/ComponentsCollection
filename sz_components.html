@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <title>Lister Page • SZ</title>
+        <meta name="description" content="" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet">
+        
+        <style type="text/css">
+            /* COMMON VARIABLES */
+            :root {
+             --primary: #0cd;/* Turquoise*/
+             --primaryHover: #000;
+             --white: #fff;
+             --lightGray: #f5f5f5;
+             --mediumGray: #ddd;
+             --halfMediumGray: #777;
+             --darkGray: #555;
+             --ultraDarkGray: #333;
+             --black: #000;
+             --error: #e00;
+             --red: #e00;
+             --green: #3a7;
+             --baseSize: 17px;
+            }
+            
+            /* BROWSER DEFAULT STYLES RESET */
+            *{box-sizing:border-box}
+            html,body{margin:0;height:100%;position:relative;display:block;font-family:'Muli',sans-serif;font-size:var(--baseSize)}
+            body{background:var(--lightGray);display:table;height:100%}
+            h1,h2,h3,h4,h5,h6,p,hr,dl,dd,dt,ul,ol,li,input,option,button,form,a,figure{margin:0;padding:0;font-size:100%;line-height:1em;font-weight:normal;list-style:none outside;text-decoration:none;vertical-align:baseline;border:0}
+            input,option{border:none;transition:all .2s}
+            a,a:link{color:var(--primary);transition:all .2s}
+            a:hover,a:focus,a:active{color:var(--primaryHover);transition:all .2s;text-decoration:underline}
+            
+            /* Align */
+            ._ac{text-align: center}
+            ._ar{text-align: right}
+            /* Display */
+            ._db{display:block}
+            ._dib{display:inline-block}
+            ._di{display:inline}
+            ._dn{display:none}
+            ._dt{display:table}
+            ._dtc{display:table-cell}
+            /* Float */
+            ._fl{float:left}
+            ._fr{float:right}
+            ._fn{float:none}
+            /* Margin */
+            ._m24{margin:24px}
+            ._m1624{margin:24px;margin-top:16px;margin-bottom:16px}
+            ._mlr24{margin-left:24px;margin-right:24px}
+            ._mtb24{margin-top:24px;margin-bottom:24px}
+            /* Colored background */
+            ._bgWhite{background:var(--white)}
+            /* Width */
+            ._w100{width:100%}
+            ._w50{width:50%}
+            ._w25{width:25%}
+            
+            /* ATOM : PRICE */
+            .price{font-weight:700}
+            .price del{font-size:80%;font-weight:400}
+            
+            /* ATOM : SEPARATOR */
+            hr.separator{border-bottom:1px solid var(--mediumGray);margin:24px 0}
+            
+            /* ATOM : TITLING AND TEXT  */
+            h1,h2,h3{font-family:'Muli',sans-serif;margin:0;padding:0}
+            h1{font-size:44px;line-height:56px;font-weight:700}
+            h2{font-size:32px;line-height:36px;font-weight:700}
+            h3{font-size:24px;line-height:28px;font-weight:500}
+            p{line-height:22px;font-weight:300}
+            ._txtL{font-size:19px;line-height:24px}
+            ._txtR{font-size:17px;line-height:22px}
+            ._txtS{font-size:14px;line-height:18px}
+            ._txtM{font-size:8px;line-height:8px}
+            li{font-weight:300}
+                
+            /* ATOM : BUTTON */
+            button,
+            .btn{padding:0 8px;border-radius:32px;transition:all .2s;cursor:pointer;text-align:center}
+            button span,
+            .btn span{padding:8px 8px;display:inline-block}
+            button.btnPrimary,
+            .btn.btnPrimary{background:var(--primary);border:1px solid var(--primary);color:var(--white);box-shadow:0 2px 1px rgba(0,0,0,.1)}
+            button.btnPrimary:hover,
+            .btn.btnPrimary:hover{background:var(--white);border:1px solid var(--primary);color:var(--primary);box-shadow:0 2px 4px rgba(0,0,0,.2),0 0 0 4px rgba(0,0,0,.1)}
+            button.btnPrimary:hover,
+            .btn.btnPrimary:hover{background:var(--white);border:1px solid var(--primary);color:var(--primary);box-shadow:0 2px 4px rgba(0,0,0,.2),0 0 0 4px rgba(0,0,0,.1)}
+            button.btnSecondary,
+            .btn.btnSecondary{background:var(--darkGray);border:1px solid var(--darkGray);color:var(--white);box-shadow:0 2px 1px rgba(0,0,0,.2)}
+            button.btnSecondary:hover,
+            .btn.btnSecondary:hover{background:var(--primary);border:1px solid var(--primary);color:var(--white);box-shadow:0 2px 4px rgba(0,0,0,.2),0 0 0 4px rgba(0,0,0,.1)}
+            .btnTertiary{background:#fff;border:1px solid var(--lightGray);color:var(--darkGray);box-shadow:0 2px 1px rgba(0,0,0,.2)}
+            .btnTertiary:hover{background:var(--primary);border:1px solid var(--primary);color:var(--white);box-shadow:0 2px 6px rgba(0,0,0,.2),0 0 0 4px rgba(0,0,0,.1);transition:all .2s}
+            .btnText{font-weight:300;background:#fff;border:1px solid var(--white);color:var(--primary);box-shadow:0 0 0}
+            .btnText:hover{background:var(--lightGray);border:1px solid var(--lightGray);color:var(--darkGray);box-shadow:0 0 0; transition:all .2s}
+            .closeBtn{background:#fff;border:1px solid var(--white);color:var(--primary);box-shadow:0 0 0;position:absolute;font-size:32px;padding:4px 11px;border-radius:50%;right:24px;top:18px}
+            .closeBtn:hover{background:var(--lightGray);border:1px solid var(--lightGray);color:var(--primary);box-shadow:0 0 0; transition:all .2s;text-decoration:none} 
+            
+            /* ATOM : PICTURE */
+            figure{width:100%;display:block;position:relative}
+            figure a{display:block;line-height:0;width:100%}
+            figure img{width:100%;display:inline-block;position:relative}
+            
+            /* ATOM : ARTICLE RATING */
+            p.article__rating{position:absolute;font-size:80%;background:#222;background:linear-gradient(to bottom, rgba(10,10,10,1),rgba(22,22,22,.5));color:var(--lightGray);text-shadow:0 0 2px var(--darkGray);bottom:0;left:24px;padding:.5em;border-top-left-radius:4px;border-top-right-radius:4px}
+            p.article__rating a{color:var(--lightGray);line-height:var(--baseSize)}
+            
+            /* ATOM : ICON */
+            i.icon{width:24px;height:24px;display:inline-block;color:var(--mediumGray)}
+            i.iconBig{width:32px;height:32px}
+            i.icon.arrow{right:0;top:4px;pointer-events: none;}
+            i.icon:hover{color:var(--darkGray)}
+            i.icon svg{width:100%;fill:var(--halfMediumGray)}
+            i.icon:hover svg{fill:var(--darkGray)}
+           
+            
+            
+            
+            /* COMPONENT : TITLING */
+            .title{display:block;clear:both;background:var(--white)}
+            .title h1{padding:32px 24px 8px }
+            .title h2{padding:64px 24px 8px }
+            .title p.title__caption{padding:0 24px 8px 24px;color:var(--halfMediumGray);font-size:17px}
+            .title:after{content:'';display:block;width:25%;margin:32px 0 0 24px;font-weight:400;clear:both;border-bottom:1px solid var(--mediumGray);padding:0}
+            
+            /* COMPONENT : ROW TEXT DISPLAY */
+            .text{display:block;clear:both;background:var(--white)}
+            .text p{padding:24px 24px}
+            
+            /* COMPONENT : SECTION HEADER */
+            .section__header{display:block;clear:both;background:var(--white);position:relative}
+            .section__header h1{font-weight:500;padding:32px 24px 8px}
+            .section__header h2{font-size:24px;line-height:28px;font-weight:500;padding:24px;display:inline-block}
+            .section__header h3{font-size:19px;line-height:24px}
+            .section__header button{display:inline-block;float:right;margin:20px 24px 0 0}
+            .section__header:after{content:'';display:block;margin:0 24px 0;font-weight:400;clear:both;border-bottom:1px solid var(--mediumGray);padding:0}
+            
+            /* COMPONENT : SECTION CONTENT */
+            .section__content{display:block;clear:both;background:var(--white);position:relative}
+            .section__content a:hover{text-decoration:none;border-bottom:1px dotted var(--halfMediumGray)}
+            .section__content h2{font-size:24px;line-height:28px;padding-top:24px}
+            .section__content h3{font-size:19px;line-height:24px;font-weight:700;padding:16px 24px}
+            .section__content p{padding:24px}
+            .section__content h3 + p,
+            .section__content p + p{padding:0 24px 24px}
+            .section__content ul,
+            .section__content ol{padding:0 24px;margin:8px 24px}
+            .section__content ul li,
+            .section__content ol li{list-style:disc outside;margin:8px 0}
+            .section__content ol li{list-style:decimal outside}
+            .section__content article + a {margin-top:0;margin-bottom:24px}
+            
+            /* COMPONENT : FORM */
+            /* Form */
+            label{display:block;clear:both;line-height:120%;cursor:pointer;font-size:var(--textSize);margin:8px 24px 0 24px}
+            form{display:flex;flex-direction:column;color:var(--darkGray);background:var(--white);padding:16px 0}
+            select,input{font-family:'Muli',sans-serif}
+
+            .formItem {position:relative;width:100%;padding:8px 24px}
+            .formItem select{transition:all .2s;background:var(--white);font-size:100%;line-height:20px;-webkit-appearance:none;appearance:none;width:100%;padding:8px;border:1px solid var(--mediumGray)}
+            .formItem label+select{margin-bottom:0}
+            .formItem input[type=text],
+            .formItem input[type=email],
+            .formItem input[type=number],
+            .formItem input[type=search]{width:100%;padding:8px;border:1px solid var(--mediumGray);border-radius:4px}
+            .formItem input placeholder{color:var(--mediumGray)}
+
+            .formItem input:focus,
+            .formItem select:focus,
+            .formItem input[type=text]:focus,
+            .formItem input[type=email]:focus,
+            .formItem input[type=number]:focus{border-color:var(--primary);outline:none}
+
+            .formItem input:hover,
+            .formItem input[type=text]:hover,
+            .formItem input[type=email]:hover,
+            .formItem input[type=number]:hover,
+            .formItem select:hover{transition:all .2s;border-color:var(--primary);box-shadow:0 0 5px 1px var(--primary)}
+
+            .formItem input[type=radio]:focus,
+            .formItem input[type=radio]:active,
+            .formItem input[type=radio]:hover{box-shadow:none;outline:none}
+
+            input[type=checkbox]+label{display:inline-block;margin-left:8px;padding-bottom:8px;vertical-align:middle}
+            
+            .formItem fieldset{border:none;margin:0;padding:0;border-top:8px dotted var(--lightGray)}
+            .formItem fieldset legend{text-transform:uppercase;color:var(--halfMediumGray);margin:0 0 8px 0;padding:0 8px 0 0;display:block;position:relative}
+            .formItem fieldset.fieldsetRadio label{}
+            .formItem fieldset.fieldsetRadio label input[type=radio]{margin-left:-22px;margin-right:2px}
+            .formItem input[type=radio]{margin:6px 0}
+            
+            i.icon.arrow{right:32px;top:18px;position:absolute;pointer-events: none;}
+
+            input:focus{box-shadow:0 0 4px 1px var(--primary);outline: 0;animation: glow 800ms ease-out infinite alternate}
+            @keyframes glow {
+                0% {
+                    border-color: var(--primary);
+                    box-shadow: 0 0 4px 1px var(--primary);
+                }	
+                100% {
+                    border-color: var(--primary);
+                    box-shadow: 0 0 16px var(--primary);
+                }
+            }
+            
+            /* COMPONENT : CARD */
+            section.card{display:inline-block;border-radius:4px;overflow:hidden;background:var(--white);font-size:16px;padding:0;box-shadow:0 1px 4px 0 rgba(0,0,0,.2);position:relative;margin:8px;transition:all .2s}
+            section.card:hover{box-shadow:0 5px 16px 0 rgba(0,0,0,.2);transition:all .2s}
+            section.card a h1,
+            section.card a h2,
+            section.card a h3,
+            section.card a p{color:var(--darkGray)}
+            section.card figure + .section__content h2{padding-top:48px}
+            section.card figure.card__figure__switch{width:40%;display:inline-block;vertical-align:top;float:left}
+            section.card figure.card__figure__switch + .section__content {width:60%;display:inline-block;vertical-align:top}
+            section.card figure.card__figure__switch + .section__content h3{padding-bottom:0}
+            section.card figure.card__figure__switch + .section__content p{padding:8px 24px 16px 24px}
+            
+            /* COMPONENT : ARTICLE SUGGESTION */
+            .article__suggestions{background:var(--white);padding:32px 0;position:relative}
+            .article__suggestions section{margin:0 64px}
+            .article__suggestions article{margin:2px;display:flex;flex-direction:column}
+            .article__suggestions article .article__suggestions_infos{flex-grow:1}
+            .article__suggestions article h3{font-size:19px;line-height:24px;font-weight:700;padding:16px 24px 8px}
+            .article__suggestions article p{padding:8px 16px}
+            .article__suggestions article h3, 
+            .article__suggestions article p{text-align: center}
+            .article__suggestions a p,
+            .article__suggestions a h3{color:var(--darkGray)}
+            .article__suggestions article .btn{display:block;text-align:center}
+            /*[aria-label="gallery controls"] button {position: absolute;top: 0;left:0px;color:var(--darkGray);border: 2px solid #111;border-radius: 0;width: 3rem;height: calc(60vh + 4px)}*/
+            [aria-label="gallery controls"]{top:50%;width:100%;display:block;position:absolute}
+            [aria-label="gallery controls"] button span{position:absolute;top:0;border-radius:0;width:32px;height:32px;overflow:hidden;border-top:3px solid var(--darkGray);border-right:3px solid var(--darkGray);transform:rotate(-135deg);border-top-right-radius:2px}
+            [aria-label="gallery controls"] button:hover span{border-color:var(--primary)}
+            [aria-label="gallery controls"] button[disabled] span{border-color:var(--mediumGray);cursor:default}
+            [aria-label="gallery controls"] button#previous span{left:24px}
+            [aria-label="gallery controls"] button#next span{right:24px;transform:rotate(45deg)}
+            
+            /* COMPONENT : USER IDENTITY */
+            .user__id{background:var(--white);padding:24px 0}
+            .user__id figure{width:64px;height:64px;float:left;margin:0 16px 16px 24px;position:relative}
+            .user__id figure img{border-radius:50%;width:100%;position:relative}
+            .user__id figure .user__id__marquee{border-radius:50%;width:16px;height:16px;border:1px solid var(--white);background:var(--red);position:absolute;bottom:0;right:0}
+            .user__id.small figure{width:48px;height:48px}
+            
+            .user__id.small h2{font-size:110%;line-height:24px}
+            .user__id.small p.user__caption{font-size:80%;color:var(--halfMediumGray)}
+
+            /* COMPONENT : EDITORIAL HERO BANNER */
+            .hero{display:block;width:100%;height:400px;background-position:top center;position:relative}
+            .hero__editorial{text-align:center}
+            .hero__editorial a{width:100%;height:400px;display:block}
+            .hero__editorial a:hover{text-decoration:none;border:none}
+            .hero__editorial h2{font-size:128px;line-height:48px;margin-bottom:64px;font-family:'Mr Dafoe', cursive;text-transform:;color:var(--white);font-weight:100;text-shadow: 0 0 10px rgba(5,5,5,.5);transition:all .2s}
+            .hero__editorial:hover h2{transform:scale(1.1);transition:all .2s;text-shadow: 0 10px 15px rgba(5,5,5,.4);}
+            .hero__editorial hr{border:1px solid var(--white);display:inline-block;width:100px;margin:16px 0}
+            .hero__editorial p.title__caption{text-transform:uppercase;font-weight:300;color:var(--white);padding-top:128px;text-shadow: 0 0 5px rgba(5,5,5,.5)}
+            .hero__editorial div[role=button]{position:relative;text-align:center;display:inline-block}
+            
+            /* COMPONENT : TOGGLE DSPLAY */
+            h2 button {all: inherit;cursor:pointer}
+            .toggle-container{border-top:1px solid var(--mediumGray);background:var(--white)}
+            .toggle-container h2{cursor:pointer;font-size:100%;font-weight:100;padding:0 8px;text-transform:uppercase}
+            toggle-section {display: block;border-bottom:1px solid var(--mediumGray);padding:8px 0}
+            toggle-section[role="region"] {border:2px dotted var(--mediumGray)}
+            toggle-section[role="region"] + toggle-section {border-top:0}
+            .toggle-container h2 button {all: inherit;box-sizing: border-box;display: flex;justify-content: space-between;width: 100%}
+            .toggle-container h2 button:focus svg {outline: 1px dotted #ccc}
+            .toggle-container button svg {height: 1em;margin:8px 8px 0 0}
+            .toggle-content{margin:0 16px 16px 16px}
+            [aria-expanded="true"] .vert {display: none}
+            [aria-expanded] rect {fill: currentColor}
+            
+            /* COMPONENT : SEARCH BOX */
+            .searchBox{position:relative}
+            .searchBox input.searchBox__input{border-radius:32px;padding-left:16px}
+            .searchBox button.searchBox__button{position:absolute;right:24px;top:8px;padding:8px 16px 4px 16px;background:var(--primary);border-radius:32px;border-top-left-radius:0;border-bottom-left-radius:0;text-align:center}
+            .searchBox button.searchBox__button svg{fill:var(--white)}
+            
+            /* COMPONENT : TABS */
+            .tabs .tabs_wrapper{text-align:center;padding:16px 0 8px 0}
+            .tabs .tabs_wrapper li a{padding:16px 16px;display:block;;border-bottom:1px solid var(--mediumGray)}
+            .tabs .tabs_wrapper li:last-of-type a{border-right:1px solid var(--mediumGray)}
+            .tabs .tabs_wrapper li.selected a{border:1px solid var(--mediumGray);border-bottom:1px solid var(--white);background:var(--white);box-shadow:0 -2px 7px 0 rgba(0,0,0,.1)}
+            
+            /* COMPONENT : ICON NAVIGATION FOR MOBILE VIEW */
+            .mobileNavigation{background:var(--white);box-shadow:0 -4px 16px 0 rgba(0,0,0,.2)}
+            .mobileNavigation .mobileNavigation__wrapper{text-align:center}
+            .mobileNavigation .mobileNavigation__wrapper i{display:block;clear:both;width:48px;height:48px;margin:8px auto}
+            .mobileNavigation .mobileNavigation__wrapper i svg{width:48px;height:48px}
+            .mobileNavigation .mobileNavigation__wrapper span{text-transform:uppercase;font-weight:700;padding:8px;display:inline-block;color:var(--darkGray)}
+            .mobileNavigation .mobileNavigation__wrapper li:hover span{color:var(--primary)}
+            .mobileNavigation .mobileNavigation__wrapper li:hover svg{fill:var(--primary)}
+            
+            /* COMPONENT : PRICE DISPLAY */
+            .price{position:relative}
+            .price del.priceWasPrice{display:block;clear:both;color:var(--halfMediumGray)}
+            .price .priceUnit{font-size:188.25%}
+            .price .priceWrapper{display:inline-block;font-size:70%;position:relative;margin-left:-2px}
+            .price .priceWrapper .priceUnity{height:14px;vertical-align:top;line-height:50%;top:-12px;position:absolute;font-weight:500}
+            .price .priceWrapper .priceDecimal{display:inline-block;height:14px}
+            .price .priceEcoPart{display:block;clear:both;font-size:10px;font-weight:100;color:var(--halfMediumGray)}
+            .price .priceSaving{display:block;clear:both;font-size:14px;}
+            
+            /* COMPONENT : GRID WITH LEFT-HAND NAV */            
+            .gridOfProducts{background:var(--white);clear:both;display:block}
+            .gridOfProducts nav.grid-left-hand-nav{width:22.5%;float:left}
+            .gridOfProducts nav.grid-left-hand-nav h3{font-size:80%;font-weight:700; color:var(--halfMediumGray);text-transform:uppercase;margin:0 16px 0 16px}
+            .gridOfProducts .toggle-container h2 button{font-size:80%}
+            .gridOfProducts .toggle-content .toggle-container .toggle-content{margin:0 16px}
+            .gridOfProducts .grid-left-hand-nav .toggle-content{margin:0}
+            .gridOfProducts h2.grid-left-hand-title button{font-weight:800;color:var(--darkGray)}
+            .gridOfProducts .grid-products{background:var(--white)}
+            .gridOfProducts .grid-products article{border:1px solid var(--mediumGray);position:relative;display:flex;flex-direction:column;align-self:stretch;flex:1;justify-content: space-between}
+            .gridOfProducts .grid-products article .article__suggestions_infos{flex-grow:1}
+            .gridOfProducts .grid-products article h3{font-size:var(--baseSize);line-height:24px;font-weight:700;padding:16px 24px 8px}
+            .gridOfProducts .grid-products article p{padding:8px 16px}
+            .gridOfProducts .grid-products article h3, 
+            .gridOfProducts .grid-products article p{text-align: center}
+            .gridOfProducts .grid-products a p,
+            .gridOfProducts .grid-products a h3{color:var(--darkGray)}
+            .gridOfProducts .grid-products article .btn{display:block;text-align:center}
+            
+            /* COMPONENT : CLEAR FILTERS */
+            .filters__clear-all{background:var(--lightGray);display:block;padding:16px 24px;border-top:1px solid var(--mediumGray);text-align:right;text-decoration:underline}
+            .filters__clear-all:hover{background:var(--white)}
+            
+            /* COMPONENT : COLOR FILTERS */
+            .filters__color-swatch{display:inline-block;border:1px solid var(--white);box-shadow:0 1px 2px 0 rgba(22,22,22,.2);width:24px;height:24px;transition:all .2s}
+            .filters__color-swatch:hover{transform:scale(1.2);transition:all .2s}
+            .filters__color-swatch span{display:block;overflow:hidden;width:100px;height:18px;font-size:60%;text-transform:uppercase}
+            
+            /* COMPONENT : CHECKBOX FILTERS */
+            ul.filters__checkbox-list{margin:0}
+            ul.filters__checkbox-list li div.formItem{padding:0}
+            ul.filters__checkbox-list a.fiters__clear-filter{padding:8px 0 0 0;display:inline-block;text-decoration:underline}
+
+            /* COMPONENT : TAG LIST */
+            ul.tag-list{display:inline-block;margin:8px 0 0 0}
+            ul.tag-list li{display:inline-block}
+            ul.tag-list li a{border:1px solid var(--mediumGray);padding:8px 16px;font-size:80%;display:inline-block;border-radius:16px;margin:0 4px 4px 0}
+            ul.tag-list li a.activated{border:1px solid var(--mediumGray);background:var(--mediumGray);color:var(--darkGray)}
+            ul.tag-list li a:hover{border:1px solid var(--primary);background:var(--primary);color:var(--white);text-decoration:none}
+            
+            /* COMPONENT : NOTIFICATION */
+            .notification{display:block;border:1px solid var(--mediumGray);background:var(--white);padding:16px}
+            .notification__content{margin:2px 16px 0 16px}
+            .notification__indicator{background:var(--primary);color:var(--white);border-radius:16px;width:24px;height:24px;display:inline-block;margin:0 16px 0 0;clear:left;overflow:hidden;vertical-align:middle;text-align:center;float:left}
+            .notification__information{border-color:var(--primary)}
+            .notification__confirmation{border-color:var(--green)}
+            .notification__alert{border-color:var(--red)}
+            .notification__information .notification__indicator{background:var(--primary)}
+            .notification__confirmation .notification__indicator{background:var(--green)}
+            .notification__alert .notification__indicator{background:var(--red)}
+            
+            /* COMPONENT : TOAST NOTIFICATION */
+            .toast__notification{position:fixed;bottom:-100px;width:100%;text-align:center;z-index:9999}
+            .toast__notification__wrapper{width:40%;background:rgba(0,0,0,.7);border-radius:32px;text-align:left;margin:24px auto;padding:8px 16px;box-shadow: 0 16px 32px 0 rgba(5,5,5,.3)}
+            .toast__notification__content{color:var(--white);position:relative;display:inline-block;width:80%}
+            span.toast__notification__indicator{background:var(--white);border-radius:16px;width:24px;height:24px;display:inline-block;margin:6px 16px 0 0;clear:left;overflow:hidden;vertical-align:middle;text-align:center;float:left}
+            
+            /* COMPONENT : CALENDAR */
+            .calendar{background:var(--white)}
+            table.calendar__display{border-collapse:collapse;border-top:1px solid var(--lightGray)}
+            caption.calendar__title{border-right:1px solid var(--lightGray);padding:4px 8px}
+            .calendar tr{}
+            .calendar th{border-top:1px solid var(--mediumGray);padding:4px 8px;background:var(--mediumGray);font-size:80%;text-align:left}
+            .calendar tr td{border-bottom:1px solid var(--lightGray)}
+            .calendar tr td a{padding:4px 8px;display:block}
+            .calendar tr .wknr{color:var(--halfMediumGray);font-size:70%;vertical-align: bottom;text-align:left}
+            .calendar tr td.wd_5,
+            .calendar tr td.wd_6{background-color:var(--lightGray)}
+            .calendar tr td a:hover{background-color:var(--primary);color:var(--white);text-decoration:none;transform:scale(1.2);box-shadow:0 0 0 2px rgba(255,255,255,1),0 5px 10px 0 rgba(5,5,5,.1);border-radius:4px}
+            .calendar tr td.highlighted{background-color:var(--halfMediumGray);color:var(--white)}
+            .calendar tr td.activated{background-color:var(--primary);color:var(--white)}
+            .calendar tr td.activated a,
+            .calendar tr td.highlighted a{color:var(--white)}
+            .calendar caption a.arrow:focus svg {outline: 1px dotted var(--halfMediumGray)}
+            .calendar caption a.arrow svg {height: 16px}
+            .calendar caption a.arrow{width:24px;height:24px;text-align:center;display:inline-block;padding:4px 0 0 0;margin:0 auto}
+            .calendar caption a.arrow:hover {background: var(--lightGray);border-radius:24px}
+            .calendar caption a.arrow__previous{padding:4px 0 0 6px}
+            
+            /* COMPONENT : LEFT HAND LIST OF LINKS */
+            ul.listOfLinks{display:block;border-top:1px dotted var(--mediumGray)}
+            ul.listOfLinks li a{display:block;border-bottom:1px dotted var(--mediumGray);padding:16px 8px;color:var(--darkGray)}
+            ul.listOfLinks li a:hover{background:var(--lightGray)}
+            
+            /* COMPONENT : PAGINATION */
+            .pagination{text-align:center;clear:both;margin-bottom:1em}
+            .pagination a.pagination__link{border-top:1px solid var(--mediumGray);border-bottom:1px solid var(--mediumGray);color:var(--darkGray);padding:8px 16px;background:var(--white)}
+            .pagination a.pagination__link-previous{border-radius:4px 0 0 4px;border-left:1px solid var(--mediumGray)}
+            .pagination a.pagination__link-previous span.less-icon svg{height:16px}
+            .pagination a.pagination__link-selected{background:var(--darkGray);color:var(--white)}
+            .pagination a.pagination__link-next{border-radius:0 4px 4px 0; background:var(--primary);color:var(--white);border-right:1px solid var(--mediumGray)}
+            .pagination a.pagination__link-next span.more-icon svg{height:16px;fill:var(--white);margin-left:8px}
+            .pagination a.pagination__link-next:hover span.more-icon svg{fill:var(--darkGray)}
+            .pagination a.pagination__link:hover{background-color:var(--mediumGray);color:var(--darkGray)}
+            
+            /* COMPONENT : USER RATING */
+            /* 'half' class is used in this context: <input type="radio" id="star4half" name="rating" value="4,5" /><label class="half" for="star4half" title="Presque parfait - 4.5 étoiles"></label>*/
+            .user__rating{font-size:80%;display:block;clear:both}
+            .user__rating a{color:var(--darkGray);text-decoration:underline}
+            .user__rating a:hover{color:var(--primary);text-decoration:underline}
+            .user__rating .user__rating__choice{border:none;display:inline-block;vertical-align:text-bottom;padding:0 8px 0 0;margin:0}
+            .user__rating .user__rating__choice > input {display: none;margin:0} 
+            .user__rating .user__rating__choice > label:before {margin:0 4px 0 0;font-size: 1.25em;display: inline-block;content:"★"}
+            .user__rating .user__rating__choice > .half:before {content:"☆";position: absolute;}
+            .user__rating .user__rating__choice > label {color:var(--mediumGray);float:right;clear:none;margin:0}
+            .user__rating .user__rating__choice > input:checked ~ label,
+            .user__rating .user__rating__choice:not(:checked) > label:hover,
+            .user__rating .user__rating__choice:not(:checked) > label:hover ~ label {color: var(--primary)}
+            .user__rating .user__rating__choice > input:checked + label:hover,
+            .user__rating .user__rating__choice > input:checked ~ label:hover,
+            .user__rating .user__rating__choice > label:hover ~ input:checked ~ label,
+            .user__rating .user__rating__choice > input:checked ~ label:hover ~ label {color: var(--primary)} 
+
+            /* COMPONENT : SWITCH BUTTONS */
+            .switch__buttons{}
+            .switch__buttons label{margin:0 8px 0 0;padding:0;display:inline-block}
+            .switch__buttons input{display:none}
+            .switch__buttons .switch__buttons__wrapper{vertical-align:middle; display:inline-block;width:60px;height:28px;position:relative;border-radius:16px;background:var(--mediumGray);box-shadow:0 4px 16px 0 rgba(55,55,55,.5) inset,0 1px 1px 1px rgba(0,0,0,.2) inset,0 1px 0 0 rgba(255,255,255,1)}
+            .switch__buttons .switch__buttons__slider{position:absolute;left:2px;top:2px;border-radius:14px;width:58px;height:26px;overflow:hidden;appearance:none;border:none}
+            .switch__buttons .switch__buttons__slider:before{position: absolute;width:24px;height: 24px;content: ' ';left:0;top:0;background:var(--white);z-index: 1;transition:all .2s;border-radius:16px;box-shadow:0 0 2px 0 rgba(0,0,0,.5),0 1px 1px 0 rgba(0,0,0,.5)}
+            .switch__buttons .switch__buttons__slider:after{left:32px;top:2px;transition:all .2s;}
+            .switchOn,
+            .switchOn:before{background:var(--green) !important}
+            .switchOn .switch__buttons__slider:before{left:32px !important }
+            .switch__buttons__wrapper:after{content:'Activé';font-size:70%;color:var(--green);text-transform:uppercase;font-weight:700;margin-top:4px;display:inline-block;margin-left:78px;opacity:0;transition:all .2s}
+            .switch__buttons__wrapper.switchOn:after{margin-left:64px;transition:all .2s;opacity:1}
+            
+            
+            /* COMPONENT : BASKET TABLE */
+            .basket-wrapper,
+            .basket-header,
+            .basket-items,
+            .basket-footer{display:block;clear:both}
+            
+            .basket-header{background:var(--primary);color:var(--white);display:table;width:100%}
+                .basket-header header{display:table-cell;padding:8px}
+                    .basket-header header h2{font-size:100%}
+                .basket-header-options{display:table-cell;padding:8px;width:500px}
+                    .basket-header-options .header-method,
+                    .basket-header-options .header-qty,
+                    .basket-header-options .header-price{display:table-cell}
+                    .basket-header-options .header-method{width:300px}
+                    .basket-header-options .header-qty{width:100px}
+                    .basket-header-options .header-price{width:100px}
+            
+            .basket-items{background:var(--white);display:table;width:100%}
+                .basket-items article.basket-item{border-bottom:1px solid var(--mediumGray);display:table;width:100%}
+                .basket-item-details{display:table-cell;padding:8px;vertical-align:top}
+                    .basket-item-details .basket-item-image{float:left;margin:0 16px 8px 0;width:100px}
+                    .basket-item-details h3{font-size:100%;line-height:120%;padding:0 0 4px 0}
+                    .basket-item-details p{font-size:90%}
+                    .basket-item-details .basket-item-details-code{font-size:70%;color:var(--halfMediumGray)}
+
+                .basket-item-options{display:table-cell;width:500px;vertical-align:top}
+                    .basket-item-options .basket-item-method,
+                    .basket-item-options .basket-item-qty,
+                    .basket-item-options .basket-item-price{padding:8px;display:table-cell;vertical-align:top}
+                    .basket-item-options .basket-item-method{width:300px}
+                    .basket-item-options .basket-item-qty{width:100px}
+                    .basket-item-options .basket-item-price{width:100px}
+                    .basket-item-options .formItem{padding:8px 0}
+                    .basket-item-options .formItem fieldset.fieldsetRadio label{margin:8px 8px 0 24px}
+            
+                .basket-items em{text-transform:none;font-style: normal}
+            
+            .basket-footer{background:var(--white);display:table;width:100%;border-bottom:1px solid var(--mediumGray);box-shadow:0 2px 4px 0 rgba(50,50,50,.1)}
+                .basket-footer .basket-footer-display{display:table-cell;width:500px;vertical-align:top;float:right;padding:8px;clear:right;border-bottom:1px dotted var(--mediumGray)}
+                    .basket-footer .basket-footer-display .footer-text{display:table-cell;width:350px;vertical-align:top}
+                    .basket-footer .basket-footer-display .footer-values{display:table-cell;width:150px;vertical-align:top;font-weight:700}
+            
+            
+            @media screen and (min-width: 1029px)
+            {
+                .grid-wrapper-xl-1{display:grid;grid-template-columns: repeat(1, 1fr)}
+                .grid-wrapper-xl-2{display:grid;grid-template-columns: repeat(2, 1fr)}
+                .grid-wrapper-xl-3{display:grid;grid-template-columns: repeat(3, 1fr)}
+                .grid-wrapper-xl-4{display:grid;grid-template-columns: repeat(4, 1fr)}
+                .grid-wrapper-xl-5{display:grid;grid-template-columns: repeat(5, 1fr)}
+                .grid-wrapper-xl-6{display:grid;grid-template-columns: repeat(6, 1fr)}
+                
+                h2.grid-left-hand-title button{display:none}
+            }
+            
+            @media screen and (min-width: 940px) and (max-width: 1029px)
+            {
+                .grid-wrapper-l-1{display:grid;grid-template-columns: repeat(1, 1fr)}
+                .grid-wrapper-l-2{display:grid;grid-template-columns: repeat(2, 1fr)}
+                .grid-wrapper-l-3{display:grid;grid-template-columns: repeat(3, 1fr)}
+                .grid-wrapper-l-4{display:grid;grid-template-columns: repeat(4, 1fr)}
+                .grid-wrapper-l-5{display:grid;grid-template-columns: repeat(5, 1fr)}
+                
+                h2.grid-left-hand-title button{display:none}
+            }
+
+            @media screen and (min-width: 720px) and (max-width: 939px)
+            {
+                .grid-wrapper-m-1{display:grid;grid-template-columns: repeat(1, 1fr)}
+                .grid-wrapper-m-2{display:grid;grid-template-columns: repeat(2, 1fr)}
+                .grid-wrapper-m-3{display:grid;grid-template-columns: repeat(3, 1fr)}
+                .grid-wrapper-m-4{display:grid;grid-template-columns: repeat(4, 1fr)}
+                
+                /* In tablet view, the left hand nav is located on top of the product */
+                .gridOfProducts nav.grid-left-hand-nav{width:100%;clear:both;float:none}
+                .filters__clear-all{text-align:center}
+                
+                
+                .basket-header-options{display:none}
+                .basket-item-details,
+                .basket-item-options{width:100%;display:block;clear:both}
+                .basket-item-options .basket-item-method{width:50%;display:inline-block}
+                .basket-item-options .basket-item-price,
+                .basket-item-options .basket-item-qty{width:25%;display:inline-block}
+                
+            }
+
+            @media screen and (max-width: 719px)
+            {
+                .grid-wrapper-s-1{display:grid;grid-template-columns: repeat(1, 1fr)}
+                .grid-wrapper-s-2{display:grid;grid-template-columns: repeat(2, 1fr)}
+                .grid-wrapper-s-3{display:grid;grid-template-columns: repeat(3, 1fr)}
+                .grid-wrapper-s-4{display:grid;grid-template-columns: repeat(4, 1fr)}
+                
+                /* In tablet view, the left hand nav is located on top of the product */
+                .gridOfProducts nav.grid-left-hand-nav{width:100%;clear:both;float:none}
+                .filters__clear-all{text-align:center}
+                
+                /* COMPONENT : TOAST NOTIFICATION */
+                /* In mobile view, the toast notification width uses the full width of the screen */
+                .toast__notification__wrapper{width:90%}
+                
+                .basket-header-options{display:none}
+                .basket-item-details,
+                .basket-item-options{width:100%;display:block;clear:both}
+                .basket-item-options .basket-item-method{width:50%;display:inline-block}
+                .basket-item-options .basket-item-price,
+                .basket-item-options .basket-item-qty{width:25%;display:inline-block}
+
+            }
+            
+            /* Display only for accessibility */
+            .accessibility{display:none}
+        </style>
+    </head>
+    <body id="top">
+        
+        
+        <section class="basket-wrapper">
+            <div class="basket-header">
+                <header>
+                    <h2>Livraison à domicile (2 produits)</h2>
+                </header><!--
+                --><div class="basket-header-options"><!--
+                    --><div class="header-method">Livraison/Retrait</div><!--
+                    --><div class="header-qty _ac"><abbr title="Quantité">Qté</abbr></div><!--
+                    --><div class="header-price _ar">Prix</div></div>
+            </div>
+            <ul class="basket-items">
+                <li>
+                    <article class="basket-item">
+                        <div class="basket-item-details">
+                            <a href="#" title=""><img class="basket-item-image" src="https://picsum.photos/200/?random" alt="" /></a>
+                            <h3><a href="#" title="">Peinture multi-supports Colours Collection chlorophylle satin 2,5 L</a></h3>
+                            <p class="basket-item-details-code">Code produit : 3454976661807</p>
+                            <div class="basket-item-details-pricing">
+                                <p><small>Prix unitaire :</small></p>
+                                <p class="price" itemprop="price">
+                                    <span class="pricing" data-currency="EUR" data-locale="fr_FR" data-value="29.95">
+                                    <span class="pricing-whole" data-value-whole="29">29</span><span class="pricing-separator">,</span><span class="pricing-decimal" data-value-decimal="95">95</span>&nbsp;<span class="pricing-currency">€</span></span>
+                                    soit 
+                                    <span>
+                                        <span class="pricing" data-currency="EUR" data-locale="fr_FR" data-value="11.98">
+                                        <span class="pricing-whole" data-value-whole="11">11</span><span class="pricing-separator">,</span><span class="pricing-decimal" data-value-decimal="98">98</span>&nbsp;<span class="pricing-currency">€</span></span>
+                                        &nbsp;/&nbsp;<span class="pricing-whole" data-value-uom="L">L</span>
+                                    </span>
+                                </p> 
+                                <span class="basket-item-details-pricing-save"></span>
+                                <p class="basket-item-details-pricing-promo"></p>
+                            </div>
+                        </div><!--
+                        
+                        --><div class="basket-item-options">
+                            <div class="basket-item-method">
+                                <div class="formItem">
+                                    <fieldset class="fieldsetRadio _txtS" role="radiogroup">
+                                        <legend class="accessibility">Mise à disposition</legend>
+                                        <label> <input type=radio checked name=size> Livraison à domicile</label>
+                                        <label> <input type=radio name=size> Retrait 2h en magasin </label>
+                                        <label> <input type=radio name=size> Retrait en relai colis</label>
+                                    </fieldset>
+                                </div>                                     
+                            </div><!--
+
+                            --><div class="basket-item-qty _ac">
+                                <div class="formItem">
+                                    <label class="accessibility" for="">Qté<span class="accessibility">&nbsp;de&nbsp;Peinture multi-supports Colours Collection chlorophylle satin 2,5 L</span></label>
+                                    <input class="_ac" type="number" name="ci2162009120" value="1" min="0" max="999" pattern="[0-9]*" id="" />
+                                </div>
+                                <div class="formItem">
+                                    <button type="button" class="btn btnText _txtS" title="Retirer ce produit du panier">Supp. ×</button>
+                                </div>
+                            </div><!--
+
+                            --><div class="basket-item-price _ar">
+                                <p class="price">
+                                    <span class="accessibility">Prix total:</span>
+                                    <em>
+                                        <span class="pricing" data-currency="EUR" data-locale="fr_FR" data-value="29.95">
+                                        <span class="pricing-whole" data-value-whole="29">29</span><span class="pricing-separator">,</span><span class="pricing-decimal" data-value-decimal="95">95</span>&nbsp;<span class="pricing-currency">€</span></span>
+                                    </em>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="basket-item">
+                        <div class="basket-item-details">
+                            <a href="#" title=""><img class="basket-item-image" src="https://picsum.photos/200/?random" alt="" /></a>
+                            <h3><a href="#" title="">Peinture multi-supports Colours Collection chlorophylle satin 2,5 L</a></h3>
+                            <p class="basket-item-details-code">Code produit : 3454976661807</p>
+                            <div class="basket-item-details-pricing">
+                                <p><small>Prix unitaire :</small></p>
+                                <p class="price" itemprop="price">
+                                    <span class="pricing" data-currency="EUR" data-locale="fr_FR" data-value="64.95">
+                                    <span class="pricing-whole" data-value-whole="64">64</span><span class="pricing-separator">,</span><span class="pricing-decimal" data-value-decimal="95">95</span>&nbsp;<span class="pricing-currency">€</span></span> / unité
+                                </p> 
+                                <span class="basket-item-details-pricing-save"></span>
+                                <p class="basket-item-details-pricing-promo"></p>
+                            </div>
+                        </div><!--
+                        
+                        --><div class="basket-item-options">
+                            <div class="basket-item-method">
+                                <div class="formItem">
+                                    <fieldset class="fieldsetRadio _txtS" role="radiogroup">
+                                        <legend class="accessibility">Mise à disposition</legend>
+                                        <label> <input type=radio checked name=size> Livraison à domicile</label>
+                                        <label> <input type=radio name=size> Retrait 2h en magasin </label>
+                                        <label> <input type=radio name=size> Retrait en relai colis</label>
+                                    </fieldset>
+                                </div>                                     
+                            </div><!--
+
+                            --><div class="basket-item-qty _ac">
+                                <div class="formItem">
+                                    <label class="accessibility" for="">Qté<span class="accessibility">&nbsp;de&nbsp;Peinture multi-supports Colours Collection chlorophylle satin 2,5 L</span></label>
+                                    <input class="_ac" type="number" name="ci2162009120" value="2" min="0" max="999" pattern="[0-9]*" id="" />
+                                </div>
+                                <div class="formItem">
+                                    <button type="button" class="btn btnText _txtS" title="Retirer ce produit du panier">Supp. ×</button>
+                                </div>
+                            </div><!--
+
+                            --><div class="basket-item-price _ar">
+                                <p class="price">
+                                    <span class="accessibility">Prix total:</span>
+                                    <em>
+                                        <span class="pricing" data-currency="EUR" data-locale="fr_FR" data-value="129.90">
+                                        <span class="pricing-whole" data-value-whole="129">129</span><span class="pricing-separator">,</span><span class="pricing-decimal" data-value-decimal="90">90</span>&nbsp;<span class="pricing-currency">€</span></span>
+                                    </em>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+            <div class="basket-footer">
+                <div class="basket-footer-display"><!--
+                    --><div class="footer-text _ar _txtS">Sous-total :</div><!--
+                    --><div class="footer-values _ar  _txtS">239,95 €</div>
+                </div>
+                <div class="basket-footer-display"><!--
+                    --><div class="footer-text _ar _txtS">Frais de livraison :</div><!--
+                    --><div class="footer-values _ar  _txtS">5,00 €</div>
+                </div>
+                <div class="basket-footer-display"><!--
+                    --><div class="footer-text _ar _txtS">Offre spéciale :</div><!--
+                    --><div class="footer-values _ar  _txtS">- 13,00 €</div>
+                </div>
+                <div class="basket-footer-display"><!--
+                    --><div class="footer-text _ar"><big>Total :</big></div><!--
+                    --><div class="footer-values _ar"><big>1239,95 €</big></div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <code>Component : switch on/off</code>
+        
+        <div class="switch__buttons" role="radiogroup">
+            <label for="switch__button__check"><span>Accepter les cookies : </span></label>
+            <div class="switch__buttons__wrapper">
+                <input type="checkbox" name="switch__button__check" class="checkbox" />
+                <span class="switch__buttons__slider"></span>
+            </div>
+        </div>
+        
+        <code>Component : star rating</code>
+        
+        <div class="user__rating">
+            <fieldset class="user__rating__choice">
+                <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Parfait - 5 étoiles"></label>
+                <input type="radio" checked id="star4" name="rating" value="4" /><label class="full" for="star4" title="Très bon - 4 étoiles"></label>
+                <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Bon - 3 étoiles"></label>
+                <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Mauvais - 2 étoiles"></label>
+                <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Très mauvais - 1 étoile"></label>
+            </fieldset>
+            <span>94% - <a href="#" title="Soyez le premier à donner votre avis">Donnez votre avis</a></span>
+        </div>
+        
+        
+        <code>Component : Pagination</code>
+        
+        <div class="pagination">
+            <a class="pagination__link pagination__link-previous" href="#"><span class="less-icon">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 8 8">
+                <rect class="vert" height="5" width="1" y="-2" x="3" transform="rotate(45)"/>
+                <rect height="1" width="5" y="2" x="3" transform="rotate(45)"/>
+            </svg></span></a><a class="pagination__link" href="#">1</a><a class="pagination__link pagination__link-selected" href="#">2</a><a class="pagination__link" href="#">3</a><a class="pagination__link" href="#">4</a><a class="pagination__link" href="#">5</a><a class="pagination__link" href="#">6</a><a class="pagination__link pagination__link-next" href="#"><span><span>Page suivante</span><span class="more-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 8 8">
+                <rect height="1" width="5" y="-2" x="3" transform="rotate(45)"/>
+                <rect class="vert" height="5" width="1" y="-2" x="7" transform="rotate(45)"/>
+            </svg></span></span></a>
+        </div>
+        
+        
+        <code>Component : Left-hand list of links</code>
+        
+        <ul class="listOfLinks">
+            <li><a href="#" title="Don’t forget the title of this link">This is the first link</a></li>
+            <li><a href="#" title="Don’t forget the title of this link">The second link is a bit longer</a></li>
+            <li><a href="#" title="Don’t forget the title of this link">The third link is really really longer to see how it flows</a></li>
+            <li><a href="#" title="Don’t forget the title of this link">And now a short one</a></li>
+        </ul>
+        
+        
+        <code>Component : Calendar</code>
+        
+        <div class="calendar">
+            <table class="calendar__display">
+                <caption class="calendar__title" title="Novembre 2018">
+                    <a class="arrow arrow__previous" href="#" title="Mois précédent : Octobre 2018">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 8 8">
+                            <rect class="vert" height="5" width="1" y="-2" x="3" transform="rotate(45)"/>
+                            <rect height="1" width="5" y="2" x="3" transform="rotate(45)"/>
+                        </svg></a>
+                    <b><a href="" class="calendar-title-link">Novembre 2018</a></b>
+                    <a class="arrow arrow__next" href="#" title="Mois suivant : Décembre 2018">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 8 8">
+                            <rect height="1" width="5" y="-2" x="3" transform="rotate(45)"/>
+                            <rect class="vert" height="5" width="1" y="-2" x="7" transform="rotate(45)"/>
+                        </svg></a>
+                </caption>
+                <thead>
+                    <tr>
+                        <th abbr="Lundi" title="Lundi">Lu</th>
+                        <th abbr="Mardi" title="Mardi">Ma</th>
+                        <th abbr="Mercredi" title="Mercredi">Me</th>
+                        <th abbr="Jeudi" title="Jeudi">Je</th>
+                        <th abbr="Vendredi" title="Vendredi">Ve</th>
+                        <th abbr="Samedi" title="Samedi">Sa</th>
+                        <th abbr="Dimanche" title="Dimanche">Di</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="emptycells">&nbsp;</td>
+                        <td class="emptycells">&nbsp;</td>
+                        <td class="emptycells">&nbsp;</td>
+                        <td class=""><a href="#" title="">1</a></td>
+                        <td><a href="#" title="">2</a></td>
+                        <td class="wd_5"><a href="#" title="">3</a></td>
+                        <td class="wd_6"><a href="#" title="">4</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" title="">5</a></td>
+                        <td><a href="#" title="">6</a></td>
+                        <td><a href="#" title="">7</a></td>
+                        <td><a href="#" title="">8</a></td>
+                        <td><a href="#" title="">9</a></td>
+                        <td class="wd_5"><a href="#" title="">10</a></td>
+                        <td class="wd_6"><a href="#" title="">11</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" title="">12</a></td>
+                        <td><a href="#" title="">13</a></td>
+                        <td><a href="#" title="">14</a></td>
+                        <td class="activated"><a href="#" title="">15</a></td>
+                        <td><a href="#" title="">16</a></td>
+                        <td class="wd_5"><a href="#" title="">17</a></td>
+                        <td class="wd_6"><a href="#" title="">18</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" title="">19</a></td>
+                        <td><a href="#" title="">20</a></td>
+                        <td class="highlighted"><a href="#" title="">21</a></td>
+                        <td><a href="#" title="">22</a></td>
+                        <td><a href="#" title="">23</a></td>
+                        <td class="wd_5"><a href="#" title="">24</a></td>
+                        <td class="wd_6"><a href="#" title="">25</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" title="">26</a></td>
+                        <td><a href="#" title="">27</a></td>
+                        <td><a href="#" title="">28</a></td>
+                        <td><a href="#" title="">29</a></td>
+                        <td><a href="#" title="">30</a></td>
+                        <td class="wd_5">&nbsp;</td>
+                        <td class="wd_6">&nbsp;</td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td colspan="7" class="emptycells">&nbsp;</td>
+                    </tr>
+                    -->
+                </tbody>
+            </table>
+        </div>
+        
+        <code>Component : Default notification</code>
+        
+        <div class="notification notification__alert">
+            <span class="notification__indicator">!</span>
+            <div class="notification__content">
+                <p class="_txtS">
+                    This is an alert box. Le produit <strong>Lorem Ipsum Set dolor Sic Amet</strong> a été retiré de votre panier, car il n’est plus disponible ! 
+                </p>
+            </div>
+        </div>
+        
+        <div class="notification notification__info">
+            <span class="notification__indicator">ℹ</span>
+            <div class="notification__content">
+                <p class="_txtS">
+                    This is an information box. Everything that needs to be known, but isn't an alert or a confirmation. 
+                </p>
+            </div>
+        </div>
+        
+        <div class="notification notification__confirmation">
+            <span class="notification__indicator">✔</span>
+            <div class="notification__content">
+                <p class="_txtS">
+                    This is a confirmation box. Le produit <strong>Lorem Ipsum Set dolor Sic Amet</strong> a été ajouté à votre panier ! 
+                </p>
+            </div>
+        </div>
+
+        <br />
+        
+        <code>Component : Toast notification</code>
+        
+        <div class="toast__notification">
+            <div class="toast__notification__wrapper">
+                <span class="toast__notification__indicator">✔</span>
+                <div class="toast__notification__content">
+                    <p class="_txtS">
+                        Le produit <strong>Lorem Ipsum Set dolor Sic Amet</strong> a été ajouté à votre panier ! 
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <br />
+        
+        <code>Component : Price block display</code>
+        
+        <div class="price">
+            <del class="priceWasPrice">299.00 €/m<sup>2</sup></del>
+            <span class="priceUnit">199</span>
+            <span class="priceWrapper">
+                <span class="priceUnity">€/m<sup>2</sup></span>
+                <span class="priceDecimal">.00</span>
+            </span>
+            <span class="priceEcoPart">dont recyclage 0.00 €</span>
+            <span class="priceSaving">Vous économisez 10.00 €</span>
+        </div>
+        
+        <br />
+        
+        <code>Component : Tags list and Tags list filters (with dismiss cross)</code>
+        
+        <br />
+        
+        <ul class="tag-list">
+            <li><a href="#" title="" class="activated">Lorem <span>×</span></a></li>
+            <li><a href="#" title="" class="activated">Ipsum <span>×</span></a></li>
+            <li><a href="#" title="" class="activated">Set dolor <span>×</span></a></li>
+            <li><a href="#" title="" class="activated">Sic amet <span>×</span></a></li>
+            <li><a href="#" title="" class="activated">Sed octectetur sad sim <span>×</span></a></li>
+        </ul>
+        
+        <br />
+        
+        <code>Component : Tags list</code>
+        
+        <br />
+        
+        <ul class="tag-list">
+            <li><a href="#" title="">Lorem</a></li>
+            <li><a href="#" title="">Ipsum</a></li>
+            <li><a href="#" title="" class="activated">Set dolor</a></li>
+            <li><a href="#" title="">Sic amet</a></li>
+            <li><a href="#" title="">Sed octectetur sad sim</a></li>
+        </ul>
+        
+        <br />
+        
+        <code>Component : collapsible content</code>
+        
+        <section class="toggle-container">
+            <toggle-section open="true">
+                <h2 id="section-1">
+                    <button aria-expanded="true">
+                        Présentation
+                        <svg aria-hidden="false" focusable="false" viewBox="0 0 9 9">
+                            <rect class="vert" height="7" width="1" y="1" x="4"/>
+                            <rect height="1" width="7" y="4" x="1"/>
+                        </svg>
+                    </button>
+                </h2>
+                <div class="toggle-content" aria-hidden="false">
+                    <p class="_txtS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non lectus sit amet nunc    facilisis molestie. Praesent quis libero et mauris facilisis dignissim at sed nisi.</p> 
+                    <p class="_txtS">Nullam efficitur porttitor lectus, ac finibus nibh fermentum ac. Phasellus aliquam, nibh non efficitur pharetra, tellus diam posuere lectus, a consequat elit ex nec ligula.</p>
+                </div>
+            </toggle-section>
+            <toggle-section open="false">
+                <h2 id="section-2">
+                    <button aria-expanded="false">
+                        Avis
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 9 9">
+                            <rect class="vert" height="7" width="1" y="1" x="4"/>
+                            <rect height="1" width="7" y="4" x="1"/>
+                        </svg>
+                    </button>
+                </h2>
+                <div hidden class="toggle-content" aria-hidden="true">
+                    <p class="_txtS">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non lectus sit amet nunc    facilisis molestie. Praesent quis libero et mauris facilisis dignissim at sed nisi.</p> 
+                    <p class="_txtS">Nullam efficitur porttitor lectus, ac finibus nibh fermentum ac. Phasellus aliquam, nibh non efficitur pharetra, tellus diam posuere lectus, a consequat elit ex nec ligula.</p>
+                </div>
+            </toggle-section>
+        </section>
+        
+        <br />
+        
+        <code>Component : form</code>
+        
+        <section class="formWrapper">
+            <form action="" method="" class="">
+                <label class="" for="selectBox">Label</label>
+                <div class="formItem">
+                    <select class="" id="selectBox" name="selectBox">
+                        <option class="">Blabla</option>
+                        <option class="" selected>2 Blabla</option>
+                        <option class="" disabled>3 Blabla</option>
+                        <option class="">4 Blabla</option>
+                    </select>
+                    <i class="icon arrow">
+                        <svg height="12" width="12" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img"><title></title><path d="M12.00,19.50 L0.66,8.29 C-0.22,7.43 -0.22,6.02 0.66,5.15 C1.54,4.28 2.96,4.28 3.84,5.15 L12.00,13.21 L20.16,5.15 C21.04,4.28 22.46,4.28 23.34,5.15 C24.22,6.02 24.22,7.43 23.34,8.29 L12.00,19.50 Z"></path></svg>
+                    </i>
+                </div>
+
+                <div class="formItem">
+                    <fieldset class="fieldsetRadio">
+                        <legend>Lorem Ipsum</legend>
+                        <label> <input type=radio checked name=size> Set dolor</label>
+                        <label> <input type=radio name=size> Sic amet </label>
+                        <label> <input type=radio name=size> Large is that it has a more-or-less normal distribution of letters</label>
+                    </fieldset>
+                </div>
+
+                <label class="_mb4" for="inputBox">Label</label>
+                <div class="formItem">
+                    <input type="text" id="inputBox" name="inputBox" class="" required aria-required="true" />
+                </div>
+
+                <div class="formItem">
+                    <button type="button" class="btn btnText"><span>Text Link Btn</span></button>
+                    <button type="button" class="btn btnPrimary"><span>Primary</span></button>
+                    <button type="button" class="btn btnSecondary"><span>Secondary</span></button>
+                    <button type="button" class="btn btnTertiary"><span>Tertiary</span></button>
+                </div>
+            </form>
+        </section>
+        
+        <br />
+        
+        <code>Component : search box</code>
+        
+        <div class="searchBox">
+            <form action="" method="">
+                <label class="accessibility" for="searchBox">Rechercher</label>
+                <div class="formItem">
+                    <div id="searchBoxWrapper">
+                        <input type="search" class="searchBox__input" value="" placeholder="Rechercher…" id="searchBox" aria-label="Rechercher dans le contenu du site" name="query" />
+                        <button type="submit" name="searchSubmit" id="searchSubmit" value="Lancer la recherche" class="searchBox__button">
+                            <i class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="24" height="24" viewBox="0 0 56.966 56.966">
+                                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"></path>
+                                </svg>
+                            </i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <br />
+        
+        <code>Component : grid of products</code>
+        
+        
+                    
+        <div class="gridOfProducts">
+            <div class="">
+                <nav class="grid-left-hand-nav">
+                    <section class="toggle-container">
+                        <toggle-section open="true">
+                            <h2 id="section-1" class="grid-left-hand-title">
+                                <button aria-expanded="true">
+                                    Filtrer les résultats
+                                    <svg aria-hidden="false" focusable="false" viewBox="0 0 9 9">
+                                        <rect class="vert" height="7" width="1" y="1" x="4"/>
+                                        <rect height="1" width="7" y="4" x="1"/>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div class="toggle-content" aria-hidden="false">
+                                <div class="formItem _txtS">
+                                    <select id="selectBox" name="selectBox">
+                                        <option>Trier les résultats…</option>
+                                        <option>Par pertinence</option>
+                                        <option>Les plus récents en premier</option>
+                                        <option>Les moins chers en premier</option>
+                                        <option>Les plus chers en premier</option>
+                                        <option>Les mieux notés en premier</option>
+                                        <option>Les petites tailles en premier</option>
+                                        <option>Les grandes tailles en premier</option>
+                                    </select>
+                                    <i class="icon arrow">
+                                        <svg height="12" width="12" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img"><title></title><path d="M12.00,19.50 L0.66,8.29 C-0.22,7.43 -0.22,6.02 0.66,5.15 C1.54,4.28 2.96,4.28 3.84,5.15 L12.00,13.21 L20.16,5.15 C21.04,4.28 22.46,4.28 23.34,5.15 C24.22,6.02 24.22,7.43 23.34,8.29 L12.00,19.50 Z"></path></svg>
+                                    </i>
+                                </div>
+
+                                <div>
+                                    <a class="filters__clear-all _txtS" href="#" title="Effacer tous les filtres"><span>×</span> Effacer tous les filtres</a>
+                                </div>
+
+                                <section class="toggle-container">
+                                    <toggle-section open="false">
+                                        <h2 id="section-1">
+                                            <button aria-expanded="false">
+                                                Résultats par page
+                                                <svg aria-hidden="true" focusable="false" viewBox="0 0 9 9">
+                                                    <rect class="vert" height="7" width="1" y="1" x="4"/>
+                                                    <rect height="1" width="7" y="4" x="1"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div hidden class="toggle-content" aria-hidden="true">
+                                            <ul class="tag-list">
+                                                <li><a href="#" title="">16</a></li>
+                                                <li><a href="#" title="">32</a></li>
+                                                <li><a href="#" title="" disabled class="activated">64</a></li>
+                                                <li><a href="#" title="">Tous</a></li>
+                                            </ul>
+                                            <a href="#" class="fiters__clear-filter _txtS" title="Effacer ce filtre">Effacer ce filtre</a>
+                                        </div>
+                                    </toggle-section>
+                                    <toggle-section open="true">
+                                        <h2 id="section-2">
+                                            <button aria-expanded="true">
+                                                Couleur
+                                                <svg aria-hidden="false" focusable="false" viewBox="0 0 9 9">
+                                                    <rect class="vert" height="7" width="1" y="1" x="4"/>
+                                                    <rect height="1" width="7" y="4" x="1"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div class="toggle-content" aria-hidden="false">
+                                            <ul aria-labelledby="colorPicker">
+                                                <li class="filters__color-swatch" style="background-color:#ff2000" data-color-code="0" data-tooltip-title="Rouge" role="button" aria-label="Rouge" id=""></li>
+                                                <li class="filters__color-swatch" style="background-color:#fffa00" data-color-code="2" data-tooltip-title="Jaune citron" role="button" aria-label="Jaune" id=""></li>
+                                                <li class="filters__color-swatch" style="background-color:#00ab00" data-color-code="3" data-tooltip-title="Vert épinard" role="button" aria-label="Vert"></li>
+                                                <li class="filters__color-swatch" style="background-color:#0bf" data-color-code="5" data-tooltip-title="Bleu" role="button" aria-label="Bleu"></li>
+                                                <li class="filters__color-swatch" style="background-color:#8c20ba" data-color-code="6" data-tooltip-title="Violet" role="button" aria-label="Violet"></li>
+                                                <li class="filters__color-swatch" style="background-color:#f52394" data-color-code="a" data-tooltip-title="Rose" role="button" aria-label="Rose"></li>
+                                                <li class="filters__color-swatch" style="background-color:#ffffff" data-color-code="c" data-tooltip-title="Blanc" role="button" aria-label="Blanc"></li>
+                                                <li class="filters__color-swatch" style="background-color:#7c7c7c" data-color-code="d" data-tooltip-title="Gris" role="button" aria-label="Gris"></li>
+                                                <li class="filters__color-swatch" style="background-color:#000000" data-color-code="e" data-tooltip-title="Noir" role="button" aria-label="Noir"></li>
+                                                <li class="filters__color-swatch" style="background:linear-gradient(-45deg, white 20%, #8b0 20%, white 40%, #8b0 40%, white 60%, #8b0 60%,white 80%, #8b0 80%);" data-color-code="f" data-tooltip-title="Motif" role="button" aria-label="Motif"></li>
+                                            </ul>
+                                        </div>
+                                    </toggle-section>
+                                    <toggle-section open="false">
+                                        <h2 id="section-2">
+                                            <button aria-expanded="false">
+                                                Morphologie
+                                                <svg aria-hidden="true" focusable="false" viewBox="0 0 9 9">
+                                                    <rect class="vert" height="7" width="1" y="1" x="4"/>
+                                                    <rect height="1" width="7" y="4" x="1"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div hidden class="toggle-content" aria-hidden="true">
+                                            <ul class="filters__checkbox-list  _txtS">
+                                                <li>
+                                                    <div class="formItem">
+                                                        <input type="checkbox" id="size-xs" />
+                                                        <label for="size-xs">Très mince</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="formItem">
+                                                        <input type="checkbox" id="size-s" />
+                                                        <label for="size-s">Mince</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="formItem">
+                                                        <input type="checkbox" id="size-m" />
+                                                        <label for="size-m">Normale</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="formItem">
+                                                        <input type="checkbox" id="size-l" />
+                                                        <label for="size-l">Quelques formes</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="formItem">
+                                                        <input type="checkbox" id="size-xl" />
+                                                        <label for="size-xl">De jolies formes</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="formItem">
+                                                        <input type="checkbox" id="size-xxl" />
+                                                        <label for="size-xxl">Forte</label>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#" class="fiters__clear-filter" title="Effacer ce filtre">Effacer ce filtre</a></li>
+                                            </ul>
+                                        </div>
+                                    </toggle-section>
+                                    <toggle-section open="false">
+                                        <h2 id="section-2">
+                                            <button aria-expanded="false">
+                                                Taille de bassin
+                                                <svg aria-hidden="true" focusable="false" viewBox="0 0 9 9">
+                                                    <rect class="vert" height="7" width="1" y="1" x="4"/>
+                                                    <rect height="1" width="7" y="4" x="1"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div hidden class="toggle-content" aria-hidden="true">
+                                            456
+                                        </div>
+                                    </toggle-section>
+                                    <toggle-section open="false">
+                                        <h2 id="section-2">
+                                            <button aria-expanded="false">
+                                                Matière
+                                                <svg aria-hidden="true" focusable="false" viewBox="0 0 9 9">
+                                                    <rect class="vert" height="7" width="1" y="1" x="4"/>
+                                                    <rect height="1" width="7" y="4" x="1"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div hidden class="toggle-content" aria-hidden="true">
+                                            456
+                                        </div>
+                                    </toggle-section>
+                                    <toggle-section open="false">
+                                        <h2 id="section-2">
+                                            <button aria-expanded="false">
+                                                Marque
+                                                <svg aria-hidden="true" focusable="false" viewBox="0 0 9 9">
+                                                    <rect class="vert" height="7" width="1" y="1" x="4"/>
+                                                    <rect height="1" width="7" y="4" x="1"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div hidden class="toggle-content" aria-hidden="true">
+                                            456
+                                        </div>
+                                    </toggle-section>
+                                    <toggle-section open="false">
+                                        <h2 id="section-2">
+                                            <button aria-expanded="false">
+                                                Usage
+                                                <svg aria-hidden="true" focusable="false" viewBox="0 0 9 9">
+                                                    <rect class="vert" height="7" width="1" y="1" x="4"/>
+                                                    <rect height="1" width="7" y="4" x="1"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div hidden class="toggle-content" aria-hidden="true">
+                                            456
+                                        </div>
+                                    </toggle-section>
+                                    <toggle-section open="false">
+                                        <h2 id="section-2">
+                                            <button aria-expanded="false">
+                                                Avis
+                                                <svg aria-hidden="true" focusable="false" viewBox="0 0 9 9">
+                                                    <rect class="vert" height="7" width="1" y="1" x="4"/>
+                                                    <rect height="1" width="7" y="4" x="1"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div hidden class="toggle-content" aria-hidden="true">
+                                            456
+                                        </div>
+                                    </toggle-section>
+                                    <toggle-section open="false">
+                                        <h2 id="section-2">
+                                            <button aria-expanded="false">
+                                                Prix
+                                                <svg aria-hidden="true" focusable="false" viewBox="0 0 9 9">
+                                                    <rect class="vert" height="7" width="1" y="1" x="4"/>
+                                                    <rect height="1" width="7" y="4" x="1"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div hidden class="toggle-content" aria-hidden="true">
+                                            456
+                                        </div>
+                                    </toggle-section>
+                                </section>    
+                            </div>
+                        </toggle-section>
+                    </section>
+                </nav>
+                    
+                <section class="grid-wrapper-xl-4 grid-wrapper-l-3 grid-wrapper-m-2 grid-wrapper-s-2 grid-products">
+                    <article>
+                        <figure>
+                            <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                            <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                                <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                            </p>
+                        </figure>
+                        <div class="article__suggestions_infos">
+                            <a href="#" title="">
+                                <h3>Perceuse PSB 1800</h3>
+                                <p class="price">124,99 €</p>
+                            </a>
+                        </div>
+                        <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                    </article>
+
+                    <article>
+                        <figure>
+                            <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                            <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                                <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                            </p>
+                        </figure>
+                        <div class="article__suggestions_infos">
+                            <a href="#" title="">
+                                <h3>Perceuse PSB 1800 LI-2 1</h3>
+                                <p class="price">124,99 €</p>
+                            </a>
+                        </div>
+                        <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                    </article>
+
+                    <article>
+                        <figure>
+                            <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                            <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                                <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                            </p>
+                        </figure>
+                        <div class="article__suggestions_infos">
+                            <a href="#" title="">
+                                <h3>Perceuse à percussion sans-fil Black &amp; Decker PSB 1800 LI-2 1 Decker PSB 1800 LI-2 1</h3>
+                                <p class="price">124,99 €</p>
+                            </a>
+                        </div>
+                        <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                    </article>
+
+                    <article>
+                        <figure>
+                            <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                            <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                                <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                            </p>
+                        </figure>
+                        <div class="article__suggestions_infos">
+                            <a href="#" title="">
+                                <h3>Perceuse à percussion sans-fil Black &amp; Decker PSB 1800 LI-2 1</h3>
+                                <p class="price">124,99 €</p>
+                            </a>
+                        </div>
+                        <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                    </article>
+
+                    <article>
+                        <figure>
+                            <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                            <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                                <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                            </p>
+                        </figure>
+                        <div class="article__suggestions_infos">
+                            <a href="#" title="">
+                                <h3>Perceuse à percussion sans-fil Black &amp; Decker PSB 1800 LI-2 1</h3>
+                                <p class="price">124,99 €</p>
+                            </a>
+                        </div>
+                        <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                    </article>
+
+                    <article>
+                        <figure>
+                            <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                            <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                                <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                            </p>
+                        </figure>
+                        <div class="article__suggestions_infos">
+                            <a href="#" title="">
+                                <h3>Perceuse à percussion sans-fil BOSCH PSB 1800 LI-2 1 bat 2,0 Ah</h3>
+                                <p class="price"><del>199,99 €</del> 124,99 €</p>
+                            </a>
+                        </div>
+                        <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                    </article>
+
+                    <article>
+                        <figure>
+                            <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                            <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                                <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                            </p>
+                        </figure>
+                        <div class="article__suggestions_infos">
+                            <a href="#" title="">
+                                <h3>Perceuse à percussion sans-fil BOSCH PSB 1800 LI-2 1 bat 2,0 Ah</h3>
+                                <p class="price"><del>199,99 €</del> 124,99 €</p>
+                            </a>
+                        </div>
+                        <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                    </article>
+
+                    <article>
+                        <figure>
+                            <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                            <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                                <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                            </p>
+                        </figure>
+                        <div class="article__suggestions_infos">
+                            <a href="#" title="">
+                                <h3>Perceuse à percussion sans-fil BOSCH PSB 1800 LI-2 1 bat 2,0 Ah</h3>
+                                <p class="price"><del>199,99 €</del> 124,99 €</p>
+                            </a>
+                        </div>
+                        <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                    </article>
+
+                    <article>
+                        <figure>
+                            <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                            <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                                <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                            </p>
+                        </figure>
+                        <div class="article__suggestions_infos">
+                            <a href="#" title="">
+                                <h3>Perceuse à percussion sans-fil BOSCH PSB 1800 LI-2 1 bat 2,0 Ah</h3>
+                                <p class="price"><del>199,99 €</del> 124,99 €</p>
+                            </a>
+                        </div>
+                        <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                    </article>
+                </section> 
+            </div>    
+        </div>
+        
+        <br />
+        
+        <code>Component : user icon + name and caption</code>
+        
+        <div class="user__id">
+            <figure>
+                <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                <div class="user__id__marquee"></div>
+            </figure>
+            <h2>Prénom Nom</h2>
+            <p class="user__caption"><a href="#" title="">Modifier…</a></p>
+        </div>
+        
+        <br />
+        
+        <div class="user__id small">
+            <figure>
+                <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                <div class="user__id__marquee"></div>
+            </figure>
+            <h2>Prénom Nom in small display</h2>
+            <p class="user__caption">Décembre 2018</p>
+        </div>
+        
+        <br />
+        
+        <code>Component : Tabs navigation</code>
+        
+        <div class="tabs">
+            <ul class="tabs_wrapper grid-wrapper-xl-4 grid-wrapper-l-4 grid-wrapper-m-2 grid-wrapper-s-1">
+                <li class=""><a href="#" title="">
+                       <!-- <i class="icon arrow">
+                            <svg height="12" width="12" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img"><title></title><path d="M12.00,19.50 L0.66,8.29 C-0.22,7.43 -0.22,6.02 0.66,5.15 C1.54,4.28 2.96,4.28 3.84,5.15 L12.00,13.21 L20.16,5.15 C21.04,4.28 22.46,4.28 23.34,5.15 C24.22,6.02 24.22,7.43 23.34,8.29 L12.00,19.50 Z"></path></svg>
+                        </i>-->
+                    <span>First item</span>
+                </a></li><!--
+                --><li class="selected"><a href="#" title="">
+                        <!--<i class="icon">
+                            <svg height="12" width="12" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img"><title></title><path d="M12.00,19.50 L0.66,8.29 C-0.22,7.43 -0.22,6.02 0.66,5.15 C1.54,4.28 2.96,4.28 3.84,5.15 L12.00,13.21 L20.16,5.15 C21.04,4.28 22.46,4.28 23.34,5.15 C24.22,6.02 24.22,7.43 23.34,8.29 L12.00,19.50 Z"></path></svg>
+                        </i>-->
+                    <span>Second item</span>
+                </a></li><!--
+                --><li><a href="#" title="">
+                        <!--<i class="icon">
+                            <svg height="12" width="12" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img"><title></title><path d="M12.00,19.50 L0.66,8.29 C-0.22,7.43 -0.22,6.02 0.66,5.15 C1.54,4.28 2.96,4.28 3.84,5.15 L12.00,13.21 L20.16,5.15 C21.04,4.28 22.46,4.28 23.34,5.15 C24.22,6.02 24.22,7.43 23.34,8.29 L12.00,19.50 Z"></path></svg>
+                        </i>-->
+                    <span>Third item</span>
+                </a></li><!--
+                --><li><a href="#" title="">
+                        <!--<i class="icon">
+                            <svg height="12" width="12" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img"><title></title><path d="M12.00,19.50 L0.66,8.29 C-0.22,7.43 -0.22,6.02 0.66,5.15 C1.54,4.28 2.96,4.28 3.84,5.15 L12.00,13.21 L20.16,5.15 C21.04,4.28 22.46,4.28 23.34,5.15 C24.22,6.02 24.22,7.43 23.34,8.29 L12.00,19.50 Z"></path></svg>
+                        </i>-->
+                    <span>Last item</span>
+                </a></li>
+            </ul>
+        </div>
+        
+        <br />
+        
+        <code>Component : bottom icon navigation for mobile</code>
+        
+        <div class="mobileNavigation">
+            <ul class="mobileNavigation__wrapper grid-wrapper-xl-4 grid-wrapper-l-4 grid-wrapper-m-4 grid-wrapper-s-4">
+                <li class=""><a href="#" title=""><i class="icon"><svg height="48" width="48" viewBox="0 0 48 48" aria-hidden="true" aria-label="" role="img"><circle cx="24" cy="24" r="24" stroke-width="0"  /></svg></i>
+                    <span>First item</span>
+                </a></li><!--
+                --><li class="selected"><a href="#" title=""><i class="icon"><svg height="48" width="48" viewBox="0 0 48 48" aria-hidden="true" aria-label="" role="img"><circle cx="24" cy="24" r="24" stroke-width="0"  /></svg></i>
+                    <span>Second item</span>
+                </a></li><!--
+                --><li><a href="#" title=""><i class="icon"><svg height="48" width="48" viewBox="0 0 48 48" aria-hidden="true" aria-label="" role="img"><circle cx="24" cy="24" r="24" stroke-width="0"  /></svg></i>
+                    <span>Third item</span>
+                </a></li><!--
+                --><li><a href="#" title=""><i class="icon"><svg height="48" width="48" viewBox="0 0 48 48" aria-hidden="true" aria-label="" role="img"><circle cx="24" cy="24" r="24" stroke-width="0"  /></svg></i>
+                    <span>Last item</span>
+                </a></li>
+            </ul>
+        </div>
+        
+        <br />
+        
+        <code>Component : Editorial Hero</code>
+        
+        <div class="hero hero__editorial" style="background-image:url('https://picsum.photos/1800/400/?random');">
+            <a href="#" title="">
+                <p class="title__caption">Nouvelle collection</p>
+                <hr />
+                <h2>Rip Curl</h2>
+                
+                <div role="button" class="btn btnTertiary"><span>Découvrir !</span></div>
+            </a>    
+        </div>
+        
+        <br />
+        
+        <code>Component : Title H1 + optional caption</code>
+        
+        <div class="title">
+            <h1>Lorem Ipsum Set</h1>
+            <p class="title__caption">Optional caption</p>
+        </div>
+        
+        <br />
+        
+        <code>Component : Title H2 + optional caption</code>
+
+        <div class="title">
+            <h2>Lorem Ipsum Set</h2>
+            <p class="title__caption">Optional caption</p>
+        </div>
+        
+        <br />
+        
+        <code>Component : Text row (Large)</code>
+
+        <div class="text">
+            <p class="_txtL">Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… <a href="#" title="">read more</a></p>
+        </div>
+        
+        <br />
+        
+        <code>Component : Text row (Small)</code>
+
+        <div class="text">
+            <p class="_txtS">Small text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… <a href="#" title="">read more</a></p>
+        </div>
+        
+        <br />
+        
+        <code>Component : Single link row (Large)</code>
+
+        <div class="text">
+            <p class="_txtL"><a href="#" title="">Single link row</a></p>
+        </div>
+        
+        <br />
+        
+        <code>Component : Section header with button</code>
+
+        <div class="section__header">
+            <h2>Section header title</h2>
+            <button type="button" class="btnTertiary _txtS"><span>Voir tous</span></button>
+        </div>
+        
+        <br />
+        
+        <code>[Stacking Section header with button]</code>
+        <div class="section__header">
+            <h2>Section header title</h2>
+            <button type="button" class="btnTertiary _txtS"><span>Voir tous</span></button>
+        </div>
+        <div class="section__header">
+            <h2>Section header title</h2>
+            <button type="button" class="btnTertiary _txtS"><span>Voir tous</span></button>
+        </div>
+        <div class="section__header">
+            <h2>Section header title with a very very long title</h2>
+            <button type="button" class="btnTertiary _txtS"><span>Voir tous</span></button>
+        </div>
+        <div class="section__header">
+            <h2>Section header title</h2>
+            <button type="button" class="btnTertiary _txtS"><span>Voir tous</span></button>
+        </div>
+        
+        <br />
+        
+        <code>Component : Section header with link button</code>
+
+        <div class="section__header">
+            <h2>Section header text link</h2>
+            <button type="button" class="btnText _txtR"><span>Voir tous</span></button>
+        </div>
+                
+        <br />
+        
+        
+        <code>Component : Example of form</code>
+        
+        <div class="title">
+            <h1>Bienvenue !</h1>
+            <!--<p class="title__caption">Connectez-vous dès maintenant :</p>-->
+        </div>
+        <div class="grid-wrapper-xl-2 grid-wrapper-l-2 grid-wrapper-m-2 grid-wrapper-s-1">
+            <section class="_bgWhite">
+                <div class="title">
+                    <h2>Vous avez déjà un compte ?</h2>
+                    <p class="title__caption">Connectez-vous dès maintenant :</p>
+                </div>
+                <form action="" method="">
+                    <label for="inputBoxEmail">Votre adresse e-mail :</label>
+                    <div class="formItem">
+                        <input type="text" id="inputBoxEmail" name="inputBoxEmail" required aria-required="true" />
+                    </div>
+
+                    <label class="" for="inputBoxPassw">Votre mot de passe :</label>
+                    <div class="formItem">
+                        <input type="text" id="inputBoxPassw" name="inputBoxPassw" required aria-required="true" />
+                        <a href="#" class="_txtS">Mot de passe oublié ?</a>
+                    </div>
+
+                    <div class="formItem">
+                        <input type="checkbox" id="saveSettings" name="saveSettings" value="Save login infos">
+                        <label for="saveSettings">Se souvenir de vos informations</label>
+                    </div>
+
+                    <div class="formItem">
+                        <button type="button" class="btn btnPrimary"><span>Se connecter</span></button>
+                    </div>
+                </form>
+            </section>
+            <section class="_bgWhite">
+                <div class="title">
+                    <h2>Vous n’avez pas de compte ?</h2>
+                    <p class="title__caption">Créez-en un : c’est rapide et gratuit !</p>
+                </div>
+                <form action="" method="">
+                    <label for="inputBoxCreateEmail">Votre adresse e-mail :</label>
+                    <div class="formItem">
+                        <input type="text" id="inputBoxCreateEmail" name="inputBoxCreateEmail" required aria-required="true" placeholder="email@exemple.com" />
+                    </div>
+
+                    <label for="inputBoxCreatePassw">Choisissez un mot de passe :</label>
+                    <div class="formItem">
+                        <input type="text" id="inputBoxCreatePassw" name="inputBoxCreatePassw" required aria-required="true" />
+                        <p class="_error _colorR _txtS _mtb8">Le mot de passe que vous avez choisi n’est pas assez sécurisé. Nous vous conseillons d’y ajouter des chiffres et des lettres en alternant majuscules et minuscules, ainsi qu’un ou plusieurs caractères spéciaux (-, *, ? ou !).</p>
+                    </div>
+
+                    <label for="inputBoxRepeatPassw">Répétez ce mot de passe :</label>
+                    <div class="formItem">
+                        <input type="text" id="inputBoxRepeatPassw" name="inputBoxRepeatPassw" required aria-required="true" />
+                    </div>
+
+                    <div class="formItem">
+                        <button type="button" class="btn btnPrimary"><span>Créer ce compte</span></button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        
+        <code>Component : Example of Section header + section content</code>
+
+        <div class="section__header">
+            <h2>Section header text link</h2>
+            <a href="#" title="" class="closeBtn">×</a>
+        </div>
+        <div class="section__content">
+            <figure>
+                <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                    <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                </p>
+            </figure>
+            <article>
+                <h3>This is a h3 Titling level</h3>
+                <p>Text is free in the section content. text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… <a href="#" title="">read more</a></p>
+                <p class="_txtS">Text  text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… <a href="#" title="">read more</a></p>
+            </article>
+        </div>
+        
+        <code>Component : single card display</code>
+        
+        <section class="card">
+            <figure class="card__figure">
+                <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                    <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                </p>
+            </figure>
+            <div class="section__content">
+                <article>
+                    <a href="" title="">
+                        <div class="title">
+                            <h2>Comment poser un parquet flottant</h2>
+                            <p class="title__caption">Fiche conseil</p>
+                        </div>
+                        <div class="text">
+                            <p class="_txtS">Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+                        </div>
+                    </a>
+                </article>
+                <a href="#" title="" class="btn btnPrimary _m1624 _dib"><span>Read more…</span></a>
+            </div>
+        </section>
+        
+        
+        <code>Component : single card display with image switch</code>
+        
+        <section class="card">
+            <figure class="card__figure card__figure__switch">
+                <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                    <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                </p>
+            </figure>
+            <div class="section__content">
+                <article>
+                    <a href="" title="">
+                        <div class="title">
+                            <h2>Comment poser un parquet flottant</h2>
+                            <p class="title__caption">Fiche conseil</p>
+                        </div>
+                        <div class="text">
+                            <p class="_txtS">Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+                        </div>
+                    </a>
+                </article>
+                <a href="#" title="" class="btn btnPrimary _m1624 _dib"><span>Read more…</span></a>
+            </div>
+        </section>
+
+        <code>Component : card display in a grid</code>
+        
+        <div class="grid-wrapper-xl-3 grid-wrapper-l-3 grid-wrapper-m-2 grid-wrapper-s-1">
+            <section class="card">
+                <figure class="card__figure">
+                    <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                    <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                        <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                    </p>
+                </figure>
+                <div class="section__content">
+                    <article>
+                        <a href="" title="">
+                            <div class="title">
+                                <h2>Comment poser un parquet flottant</h2>
+                                <p class="title__caption">Fiche conseil</p>
+                            </div>
+                            <div class="text">
+                                <p class="_txtS">Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+                            </div>
+                        </a>
+                    </article>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _dib"><span>Read more…</span></a>
+                </div>
+            </section>
+            <section class="card">
+                <div class="section__content">
+                    <article>
+                        <a href="" title="">
+                            <div class="title">
+                                <h2>Comment poser un parquet flottant</h2>
+                                <p class="title__caption">Fiche conseil</p>
+                            </div>
+                            <div class="text">
+                                <p class="_txtS">Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+                            </div>
+                        </a>
+                    </article>
+                    <a href="#" title="" class="btn btnText _m1624 _dib"><span>Read more…</span></a>
+                </div>
+            </section>
+            <section class="card">
+                <div class="section__content">
+                    <article>
+                        <a href="" title="">
+                            <div class="title">
+                                <h2>Comment poser un parquet flottant</h2>
+                                <p class="title__caption">Fiche conseil</p>
+                            </div>
+                            <div class="text">
+                                <p class="_txtS">Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+                            </div>
+                        </a>
+                    </article>
+                    <a href="#" title="" class="btn btnText _m1624 _dib"><span>Read more…</span></a>
+                </div>
+            </section>
+        </div>
+
+        <code>Component : card display in a grid 2</code>
+        
+        <div class="grid-wrapper-xl-2 grid-wrapper-l-2 grid-wrapper-m-1 grid-wrapper-s-1">
+            <section class="card">
+                <figure class="card__figure card__figure__switch">
+                    <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                    <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                        <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                    </p>
+                </figure>
+                <div class="section__content">
+                    <article>
+                        <a href="" title="">
+                            <h3>Comment poser un parquet flottant</h3>
+                            <div class="text">
+                                <p class="_txtS">Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+                            </div>
+                        </a>
+                    </article>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _dib"><span>Read more…</span></a>
+                </div>
+            </section>
+            <section class="card">
+                <figure class="card__figure card__figure__switch">
+                    <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                    <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                        <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                    </p>
+                </figure>
+                <div class="section__content">
+                    <article>
+                        <a href="" title="">
+                            <h3>Comment poser un parquet flottant poser un parquet flottant</h3>
+                            <div class="text">
+                                <p class="_txtS">Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante.  </p>
+                            </div>
+                        </a>
+                    </article>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _dib"><span>Read more…</span></a>
+                </div>
+            </section>
+        </div>
+        
+       
+        
+        <code>Component : article suggestions slider</code>
+        
+        <div class="article__suggestions" role="region" aria-label="gallery" tabindex="0">
+            <ul aria-label="gallery controls">  
+              <li>
+                <button id="previous" aria-label="previous" class="deactivated" disabled>
+                  <span></span>
+                </button>
+              </li>
+              <li>
+                <button id="next" aria-label="next">
+                  <span></span>
+                </button>
+              </li>
+            </ul>  
+            <section class="grid-wrapper-xl-4 grid-wrapper-l-3 grid-wrapper-m-2 grid-wrapper-s-1">
+                <article>
+                    <figure>
+                        <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                        <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                            <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                        </p>
+                    </figure>
+                    <div class="article__suggestions_infos">
+                        <a href="#" title="">
+                            <h3>Perceuse à percussion sans-fil Black &amp; Decker PSB 1800 LI-2 1</h3>
+                            <p class="price">124,99 €</p>
+                        </a>
+                    </div>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                </article>
+
+                <article>
+                    <figure>
+                        <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                        <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                            <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                        </p>
+                    </figure>
+                    <div class="article__suggestions_infos">
+                        <a href="#" title="">
+                            <h3>Perceuse à percussion sans-fil BOSCH PSB 1800 LI-2 1 bat 2,0 Ah</h3>
+                            <p class="price"><del>199,99 €</del> 124,99 €</p>
+                        </a>
+                    </div>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                </article>
+
+                <article>
+                    <figure>
+                        <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                        <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                            <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                        </p>
+                    </figure>
+                    <div class="article__suggestions_infos">
+                        <a href="#" title="">
+                            <h3>Perceuse à percussion sans-fil BOSCH PSB 1800 LI-2 1 bat 2,0 Ah</h3>
+                            <p class="price"><del>199,99 €</del> 124,99 €</p>
+                        </a>
+                    </div>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                </article>
+
+                <article>
+                    <figure>
+                        <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                        <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                            <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                        </p>
+                    </figure>
+                    <div class="article__suggestions_infos">
+                        <a href="#" title="">
+                            <h3>Perceuse à percussion sans-fil BOSCH PSB 1800 LI-2 1 bat 2,0 Ah</h3>
+                            <p class="price"><del>199,99 €</del> 124,99 €</p>
+                        </a>
+                    </div>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                </article>
+            </section>                                                        
+        </div> 
+        
+        
+        
+        
+        <code>Example of use of multiple components :</code>
+        
+        <div class="title">
+            <h1>Comment poser du papier-peint</h1>
+            <!--<p class="title__caption">Optional caption</p>-->
+        </div>
+        
+        <div class="text">
+            <p class="_txtL">Let’s start with a short introduction text, so that the reader now exactly if the content is what he's looking for. <a href="#" class="_txtS" title="">Lire la suite…</a></p>
+        </div>
+        
+        
+        <div class="title">
+            <h2>Étape 1 : préparez les murs</h2>
+            <!--<p class="title__caption">Optional caption</p>-->
+        </div>
+        
+        <article class="section__content">
+            <p>The flexible design system allows to manage short or long text. But don’t forget to be concise when writing body copy, and be synthetic and precise. Reader don't like to read to much on a screen. One idea per paragraph is the rule. Use only <strong>strong</strong> and <em>emphasis</em> when needed. Don’t write evrything in caps! Be effective at any time. Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat.</p>
+
+            <p class="_txtS">This is an example of a very small text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+
+            <p>The flexible design system allows to manage short or long text. But don’t forget to be concise when writing body copy, and be synthetic and precise. Reader don't like to read to much on a screen. Be effective at any time. Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+            
+            <ol>
+                <li>And what about a list…</li>
+                <li>…that can express many things…</li>
+                <li>…in a short, memorizable way?</li>
+            </ol>
+            
+            <p>The flexible design system allows to manage short or long text. But don’t forget to be concise when writing body copy, and be synthetic and precise. Reader don't like to read to much on a screen. Be effective at any time. Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+            
+            <a href="#" title="" class="btn btnSecondary _mlr24 _dib _ac"><span>A secondary button</span></a>
+            
+            <hr class="separator" />
+            
+            <h3>But don’t forget to be concise</h3>
+            
+            <p>The flexible design system allows to manage short or long text. But don’t forget to be concise when writing body copy, and be synthetic and precise. Reader don't like to read to much on a screen. Be effective at any time. Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+            
+            <a href="#" title="" class="btn btnPrimary _mlr24 _dib _ac"><span>Why not a big button to jump to lister page?</span></a>
+            
+            <p>The flexible design system allows to manage short or long text. But don’t forget to be concise when writing body copy, and be synthetic and precise. Reader don't like to read to much on a screen. Be effective at any time. Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… </p>
+            
+            <ul>
+                <li>And what about a list…</li>
+                <li>…that can express many things…</li>
+                <li>…in a short, memorizable way?</li>
+            </ul>
+            
+            <p>The flexible design system allows to manage short or long text. But don’t forget to be concise when writing body copy, and be synthetic and precise. Reader don't like to read to much on a screen. Be effective at any time. Text row text Curabitur imperdiet pretium ligula, ac scelerisque mauris. Sed nec odio sed purus eleifend ornare. Nullam a imperdiet ante. Cras sit amet scelerisque magna. In magna urna, sagittis quis iaculis vitae, viverra ac erat… <a href="#" title="">read more</a></p>
+        </article>
+            
+        <div class="section__header">
+            <h2>Découvrez toute la gamme</h2>
+            <button type="button" class="btnTertiary _txtS"><span>Voir tous</span></button>
+        </div>
+
+        <div class="article__suggestions" role="region" aria-label="gallery" tabindex="0">
+            <ul aria-label="gallery controls">  
+              <li>
+                <button id="previous" aria-label="previous" class="deactivated" disabled>
+                  <span></span>
+                </button>
+              </li>
+              <li>
+                <button id="next" aria-label="next">
+                  <span></span>
+                </button>
+              </li>
+            </ul>  
+            <section class="grid-wrapper-xl-4 grid-wrapper-l-3 grid-wrapper-m-2 grid-wrapper-s-1">
+                <article>
+                    <figure>
+                        <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                        <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                            <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                        </p>
+                    </figure>
+                    <div class="article__suggestions_infos">
+                        <a href="#" title="">
+                            <h3>Perceuse à percussion sans-fil Black &amp; Decker PSB 1800 LI-2 1</h3>
+                            <p class="price">124,99 €</p>
+                        </a>
+                    </div>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                </article>
+
+                <article>
+                    <figure>
+                        <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                        <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                            <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                        </p>
+                    </figure>
+                    <div class="article__suggestions_infos">
+                        <a href="#" title="">
+                            <h3>Perceuse à percussion sans-fil BOSCH PSB  à percussion sans-fil BOSCH PSB 1800 LI-2 1 bat 2,0 Ah</h3>
+                            <p class="price"><del>199,99 €</del> 124,99 €</p>
+                        </a>
+                    </div>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                </article>
+
+                <article>
+                    <figure>
+                        <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                        <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                            <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                        </p>
+                    </figure>
+                    <div class="article__suggestions_infos">
+                        <a href="#" title="">
+                            <h3>Perceuse </h3>
+                            <p class="price"><del>199,99 €</del> 124,99 €</p>
+                        </a>
+                    </div>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                </article>
+
+                <article>
+                    <figure>
+                        <a href="#" title=""><img src="https://picsum.photos/200/?random" alt="" /></a>
+                        <p class="article__rating" aria-labelledby="ratingId"><a href="#" title="Lire les avis/Écrire un avis"><strong>98%</strong>
+                            <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="1.5" focusable="false" aria-label="Ajouter ce logement à une liste" role="img" stroke-linecap="round" stroke-linejoin="round" style="height: 28px; width: 28px; display: block;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg></a>
+                        </p>
+                    </figure>
+                    <div class="article__suggestions_infos">
+                        <a href="#" title="">
+                            <h3>Perceuse à percussion  2,0 Ah</h3>
+                            <p class="price"><del>199,99 €</del> 124,99 €</p>
+                        </a>
+                    </div>
+                    <a href="#" title="" class="btn btnPrimary _m1624 _ac"><span>Ajouter au panier</span></a>
+                </article>
+            </section>                                                        
+        </div>
+ 
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script>
+            // Manage the toggle section component
+            (function() {
+              const headings = document.querySelectorAll('toggle-section > h2')
+
+              Array.prototype.forEach.call(headings, heading => {
+                let btn = heading.querySelector('button')
+                let target = heading.nextElementSibling
+
+                btn.onclick = () => {
+                  let expanded = btn.getAttribute('aria-expanded') === 'true' || false
+
+                  btn.setAttribute('aria-expanded', !expanded)
+                  target.hidden = expanded    
+                }
+              })
+            })()
+            
+            // Will fire a small toast notification, which will automatically disappear after 3s (3000 ms)
+            // Hit the toast by moving it down the bottom visible part of the screen
+            $('.toast__notification').css('bottom','-400px');
+            // Show the notification, wait, then hide it
+            $('.toast__notification').animate({bottom: '+=400'}, 'slow').delay(3000).animate({bottom: '-=400'}, 'slow');
+            
+            // Will hide the filters of gridOfProducts by default for mobile and tablet under 940px width
+            var width = $(window).width();
+            if (width < 940){
+                $('.grid-left-hand-nav > .toggle-container > toggle-section > .toggle-content').attr("aria-hidden","true").prop('hidden', true).parent('toggle-section').attr('open',false).find('h2.grid-left-hand-title > button').attr("aria-expanded",false);
+            }   
+            
+            // Activate cell of calendar display on click
+            $('.calendar td').click(function(){
+                $(this).addClass('activated');
+            });
+            
+            // Switch buttons animation
+            $('.switch__buttons__wrapper').click(function(){
+                $(this).toggleClass("switchOn");
+                var checkActivationValueOn = $('input[name=switch__button__check]');
+                if(checkActivationValueOn.prop('checked'))
+                {
+                    $(checkActivationValueOn).prop('checked',true);
+                } else {
+                    $(checkActivationValueOn).prop('checked',false);
+                }
+            });
+        
+        </script>
+    </body>
+</html>
