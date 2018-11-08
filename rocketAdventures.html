@@ -154,31 +154,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <script>
-            $('.launchRocket').mouseenter(function(){
-                $('#rocketAdventures').animate({width:'120%'});
-            });
-            
             $('.launchRocket').click(function(){
                $('#rocketAdventures').animate({
-                   top: "-=3000"
+                   top: "-=1000"
                },1000,function(){
                    //complete
                }) 
             });
-            
-            var rocketRotate = $('#rocketAdventures');
-            if(rocketRotate.length > 0){
-                var offset = rocketRotate.offset();
-                function mouse(evt){
-                    var center_x = (offset.left) - (rocketRotate.width/2);
-                    var center_y = (offset.top) - (rocketRotate.height/2);;
-                    var mouse_x = evt.pageX; var mouse_y = evt.pageY;
-                    var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
-                    var degree = (radians * (180 / Math.PI) * -1) + 90; 
-                    rocketRotate.css('transform', 'rotate('+degree+'deg)');
-                }
-                $(document).mousemove(mouse);
-            }
         </script>
     </body>
 </html>
